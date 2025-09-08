@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    @apply w-full min-h-screen m-0 p-0 overflow-x-hidden bg-zinc-950 text-zinc-50;
+    font-size: 16px; 
+  }
+
+  :root {
+    /* Glassmorphism settings */
+    --glass-bg: 0 0% 10% / 0.2;   /* hsla(0,0%,10%,0.2) */
+    --glass-blur: blur(12px);
+    --glass-border: 0 0% 100% / 0.1; /* subtle white border */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #7a7a7b, #8b5cf6);
+    --gradient-secondary: linear-gradient(135deg, #1d1717, #202034);
+    --gradient-accent: linear-gradient(135deg, #22d3ee, #06b6d4);
+
+    /* Glow colors */
+    --glow-primary: 0 0 20px rgba(99, 102, 241, 0.7);   /* indigo */
+    --glow-secondary: 0 0 20px rgba(236, 72, 153, 0.7); /* pink */
+    --glow-accent: 0 0 20px rgba(34, 211, 238, 0.7);    /* cyan */
+  }
+}
+
+/* Glass utilities */
+.glass {
+  @apply bg-zinc-900/40 backdrop-blur border border-zinc-800;
+  background: hsl(var(--glass-bg));
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid hsl(var(--glass-border));
+  box-shadow: 0 8px 32px 0 hsl(0 0% 0% / 0.4);
+}
+
+.glass-card {
+  @apply rounded-xl p-6 glass;
+  background: linear-gradient(135deg, hsl(0 0% 6% / 0.3), hsl(0 0% 10% / 0.2));
+}
+
+/* Button */
+.glass-button {
+  @apply glass rounded-lg px-6 py-3 font-medium transition-all duration-300;
+  background: var(--gradient-primary);
+}
+.glass-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-primary), 0 12px 24px 0 hsl(0 0% 0% / 0.6);
+}
+
+/* Glow effects */
+.glow-primary   { box-shadow: var(--glow-primary); }
+.glow-secondary { box-shadow: var(--glow-secondary); }
+.glow-accent    { box-shadow: var(--glow-accent); }
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px); /* slightly more visible than -1 */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25); /* or use var(--glow-primary) */
+}
+
+/* Text Gradients */
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-secondary {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
