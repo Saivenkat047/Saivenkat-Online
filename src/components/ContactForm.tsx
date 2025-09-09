@@ -35,6 +35,12 @@ export default function ContactForm() {
       onSubmit={sendEmail}
       className="glass-card animate-slide-up space-y-6"
     >
+      
+      {/* Status Message */}
+      {status && (
+        <p className="text-center text-sm text-muted mt-2">{status}</p>
+      )}
+      
       <h3 className="text-2xl font-semibold mb-6 text-foreground">
         Send Message
       </h3>
@@ -79,11 +85,6 @@ export default function ContactForm() {
       >
         Send Message
       </button>
-
-      {/* Status Message */}
-      {status && (
-        <p className="text-center text-sm text-muted mt-2">{status}</p>
-      )}
     </form>
   );
 }

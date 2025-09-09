@@ -1,9 +1,9 @@
 export default function Footer() {
   const data = {
     links: {
-      github: "https://github.com/username",
-      linkedin: "https://linkedin.com/in/username",
-      leetcode: "https://leetcode.com/username"
+      github: "https://github.com/Saivenkat047",
+      leetcode: "https://leetcode.com/Saivenkat047",
+      instagram: "https://www.instagram.com/satish.pilla11/",
     }
   };
 
@@ -17,13 +17,13 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center gap-6">
-            <a href={data.links.github} className="w-12 h-12 glass rounded-full flex items-center justify-center hover-lift glow-primary transition-all duration-300">
+            <a href={data.links.github} target="_blank" className="w-12 h-12 glass rounded-full flex items-center justify-center hover-lift glow-primary transition-all duration-300">
               🐦
             </a>
-            <a href={data.links.linkedin} className="w-12 h-12 glass rounded-full flex items-center justify-center hover-lift glow-secondary transition-all duration-300">
+            <a href={data.links.leetcode} target="_blank" className="w-12 h-12 glass rounded-full flex items-center justify-center hover-lift glow-secondary transition-all duration-300">
               💼
             </a>
-            <a href={data.links.leetcode} className="w-12 h-12 glass rounded-full flex items-center justify-center hover-lift glow-accent transition-all duration-300">
+            <a href={data.links.instagram} target="_blank" className="w-12 h-12 glass rounded-full flex items-center justify-center hover-lift glow-accent transition-all duration-300">
               🐙
             </a>
           </div>

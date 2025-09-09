@@ -164,7 +164,7 @@ export default function App() {
                       </span>)}
                   </div>
                   
-                  <a href={project.link} className="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors duration-300">
+                  <a href={project.link} target="_blank" className="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors duration-300">
                     View Project →
                   </a>
                 </div>
@@ -231,7 +231,7 @@ export default function App() {
               </p>
               
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
+                <a href='mailto:saivenkatasatishpilla@email.com' className="flex items-center gap-4">
                   <div className="w-12 h-12 glass rounded-full flex items-center justify-center glow-primary">
                     📧
                   </div>
@@ -239,9 +239,9 @@ export default function App() {
                     <p className="font-medium text-foreground">Email</p>
                     <p className="text-muted-foreground">saivenkatasatishpilla@email.com</p>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex items-center gap-4">
+                <a href={'https://www.linkedin.com/in/sai-venkata-satish-pilla/'} target="_blank" className="flex items-center gap-4">
                   <div className="w-12 h-12 glass rounded-full flex items-center justify-center glow-secondary">
                     💼
                   </div>
@@ -249,17 +249,17 @@ export default function App() {
                     <p className="font-medium text-foreground">LinkedIn</p>
                     <p className="text-muted-foreground">linkedin.com/in/sai-venkata-satish-pilla</p>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex items-center gap-4">
+                <a href='https://github.com/satish6664' target="_blank" className="flex items-center gap-4">
                   <div className="w-12 h-12 glass rounded-full flex items-center justify-center glow-accent">
                     🐙
                   </div>
                   <div>
                     <p className="font-medium text-foreground">GitHub</p>
-                    <p className="text-muted-foreground">github.com/Saivenkat047</p>
+                    <p className="text-muted-foreground">github.com/satish6664</p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 <ContactForm/>
