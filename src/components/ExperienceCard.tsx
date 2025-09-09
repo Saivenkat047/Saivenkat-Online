@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function ExperienceCard({ e, index }: { e: any, index: number }) {
   return (
     <div

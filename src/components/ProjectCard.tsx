@@ -1,4 +1,3 @@
-import React from 'react'
 export default function ProjectCard({ p }: { p: any }) {
   return (
     <a href={p.link || '#'} target={p.link ? '_blank' : undefined} rel="noreferrer"

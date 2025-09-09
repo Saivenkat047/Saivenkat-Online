@@ -1,6 +1,4 @@
-import React from 'react'
-
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 export default function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (

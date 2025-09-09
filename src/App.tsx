@@ -1,17 +1,13 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Section from './components/Section'
-import SkillPill from './components/SkillPill'
 import ExperienceCard from './components/ExperienceCard'
-import ProjectCard from './components/ProjectCard'
 import Footer from './components/Footer'
 import { fallback } from './data/fallback'
 import ContactForm from './components/ContactForm'
 
 export default function App() {
-  const [data, setData] = useState<any>(fallback)
+  const [data] = useState<any>(fallback)
 
   // useEffect(() => {
   //   fetch('http://localhost:8080/api/profile')
@@ -117,7 +113,7 @@ export default function App() {
             <div className="glass-card animate-slide-up hover-lift">
               <h3 className="text-2xl font-semibold mb-6 text-secondary">Tech Stack</h3>
               <div className="grid grid-cols-3 gap-3">
-                {data.skills.map((skill, index) => <div key={skill} className="glass rounded-lg p-3 text-center text-sm font-medium glow-primary transition-all duration-300 hover:scale-105" style={{
+                {data.skills.map((skill: string, index: number) => <div key={skill} className="glass rounded-lg p-3 text-center text-sm font-medium glow-primary transition-all duration-300 hover:scale-105" style={{
                 animationDelay: `${index * 0.1}s`
               }}>
                     {skill}
@@ -134,7 +130,7 @@ export default function App() {
           Experience
           </h2>
             <div className="space-y-8">
-{data.experience.map((exp, index) => (
+{data.experience.map((exp: {}, index: number) => (
   <ExperienceCard key={index} e={exp} index={index} />
 ))}
 
@@ -150,7 +146,7 @@ export default function App() {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.projects.map((project, index) => <div key={project.id} className="glass-card hover-lift animate-slide-up overflow-hidden group" style={{
+            {data.projects.map((project: {id: number, name: string, img: string, description: string, tech: [], link : string}, index: number) => <div key={project.id} className="glass-card hover-lift animate-slide-up overflow-hidden group" style={{
             animationDelay: `${index * 0.2}s`
           }}>
                 <div className="relative overflow-hidden">
@@ -163,7 +159,7 @@ export default function App() {
                   <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map(tech => <span key={tech} className="px-3 py-1 text-xs font-medium glass rounded-full glow-secondary">
+                    {project.tech.map((tech: string) => <span key={tech} className="px-3 py-1 text-xs font-medium glass rounded-full glow-secondary">
                         {tech}
                       </span>)}
                   </div>
