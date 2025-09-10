@@ -38,7 +38,7 @@ export default function App() {
         </div>
 
         {/* Code Snippet */}
-        <div className="absolute top-1/2 right-10 w-80 h-32 glass rounded-lg animate-float opacity-60" style={{animationDelay: '2s'}}>
+        <div className="hidden md:block absolute top-1/2 right-10 w-80 h-32 glass rounded-lg animate-float opacity-60" style={{animationDelay: '2s'}}>
           <div className="p-4">
               <div className="text-xs font-mono">
                 <div className="text-purple-400">const</div>
@@ -204,8 +204,8 @@ export default function App() {
             </div>
           </div>
           <a
-  href="/Sai_Venkat_1y.pdf"
-  download
+  href="https://drive.google.com/file/d/1z7XYc7XPta3ZviBvNGXywpHrXmME5C_2/view?usp=drivesdk" target="_blank"
+  // href="https://drive.google.com/uc?export=download&id=1z7XYc7XPta3ZviBvNGXywpHrXmME5C_2"
   className="glass-button text-lg px-8 py-4 font-semibold border border-zinc-600"
 >
   Download Resume
